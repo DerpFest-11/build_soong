@@ -847,6 +847,14 @@ func (c *config) EmitXrefRules() bool {
 	return c.XrefCorpusName() != ""
 }
 
+func (c *config) CustomClangVersion() string {
+	return String(c.productVariables.CustomClangVersion)
+}
+
+func (c *config) CustomClangShortVersion() string {
+	return String(c.productVariables.CustomClangShortVersion)
+}
+
 func (c *config) ClangTidy() bool {
 	return Bool(c.productVariables.ClangTidy)
 }
